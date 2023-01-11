@@ -21,7 +21,7 @@ export class OrdersService {
   findOne(id: string) {
     const order = this.OrderRepository.findOne(id);
     if (!order) {
-      throw new NotFoundException(`Order ID ${id} not found`);
+      throw new NotFoundException(`Order ID ${id} not found.`);
     }
     return order;
   }
